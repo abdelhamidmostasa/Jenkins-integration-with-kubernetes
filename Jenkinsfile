@@ -18,8 +18,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build dockerimagename
-          dockerImage.tag(heshamsabry02/dockerImage:latest)
+          dockerImage = docker.build ('heshamsabry02'/dockerimagename:latest)
         }
       }
     }
