@@ -19,6 +19,7 @@ pipeline {
       steps{
         script {
           dockerImage = docker.build dockerimagename
+          dockerImage.tag(heshamsabry02/dockerImage:latest)
         }
       }
     }
