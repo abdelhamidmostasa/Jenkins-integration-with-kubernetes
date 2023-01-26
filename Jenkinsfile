@@ -23,9 +23,8 @@ pipeline {
       }
     }
     
-    stage('Tag image')
-    steps{
-      script{
+    stage('Tag image'){
+      steps{
         sh(docker tag dockerImage heshamsabry02/dockerImage:latest)
       }
     }
