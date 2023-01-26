@@ -22,13 +22,7 @@ pipeline {
         }
       }
     }
-    
-    stage('Tag image'){
-      steps{
-        sh(docker tag dockerImage heshamsabry02/dockerImage:latest)
-      }
-    }
-
+  
     stage('Pushing Image') {
       environment {
                registryCredential = 'dockerhublogin'
